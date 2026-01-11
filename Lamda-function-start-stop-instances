@@ -173,12 +173,17 @@ The W wildcard in the Day-of-month field specifies a weekday. In the Day-of-mont
 The # wildcard in the Day-of-week field specifies a certain instance of the specified day of the week within a month. For example, 3#2 would be the second Tuesday of the month: the 3 refers to Tuesday because it is the third day of each week, and the 2 refers to the second day of that type within the month. 
 Examples 
 
-cron(0, 10, *, *, ?, *)          - Run at 10:00 am (UTC) every day                      
-              
-cron(0/10, *, ?, *, MON-FRI, *)  - Run every 10 minutes Monday through Friday      
+cron(0 10 * * ? *)          
+- Run at 10:00 AM (UTC) every day
 
-cron(0, 8, 1, *, ?, *)           - Run at 8:00 am (UTC) every 1st day of the month 
+cron(0/10 * ? * MON-FRI *)  
+- Run every 10 minutes, Monday through Friday
 
+cron(0/2 * ? * MON-FRI *)   
+- Run every 2 minutes, Monday through Friday
+
+cron(0 8 1 * ? *)           
+- Run at 8:00 AM (UTC) on the 1st day of every month
 
 #################################################################################################################################################
 
