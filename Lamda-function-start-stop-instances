@@ -173,6 +173,8 @@ The W wildcard in the Day-of-month field specifies a weekday. In the Day-of-mont
 The # wildcard in the Day-of-week field specifies a certain instance of the specified day of the week within a month. For example, 3#2 would be the second Tuesday of the month: the 3 refers to Tuesday because it is the third day of each week, and the 2 refers to the second day of that type within the month. 
 
 What each field means (quick decode)
+Standard - UTC = Coordinated Universal Time - Maintained by AWS
+for IST  - Indian Standard Time - UTC + 5 hours 30 minutes
 
 cron(0/2 * ? * MON-FRI *)
       │   │ │ │    │   │
